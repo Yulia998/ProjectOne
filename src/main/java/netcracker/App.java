@@ -7,5 +7,10 @@ public class App {
         int[] mas = {3, 10, 11, 0, 40, -9, -4};
         Array object = new Array(mas);
         System.out.println("Максимальный элемент массива: " + object.findMax());
+        object.sort();
+        System.out.print("Отсортированный массив: ");
+        for (int el : object.getMas()) {
+            System.out.print(el + " ");
+        }
     }
 }

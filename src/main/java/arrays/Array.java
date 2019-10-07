@@ -24,4 +24,18 @@ public class Array {
         }
         return max;
     }
+
+    public void sort() {
+        int k;
+        int element;
+        for (int i = 1; i < mas.length; i++) {
+            k = 1;
+            element = mas[i];
+            while (k <= i && mas[i - k] > element) {
+                mas[i - k + 1] = mas[i - k];
+                mas[i - k] = element;
+                k++;
+            }
+        }
+    }
 }
